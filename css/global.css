@@ -5,11 +5,53 @@
     font-family: 'Tilt Neon', cursive;
     color: rgb(255, 255, 255);
   }
-
-  a{
+body {
+    background: rgb(98,162,234);
+    background: linear-gradient(45deg, rgba(98,162,234,1) 0%, rgba(131,232,252,1) 86%);
+    padding-left: 8%;
+    padding-right: 8%;
+}
+a{
     text-decoration: none;
   }
 
-  ul{
+ul{
     list-style: none;
   }
+nav{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+}
+
+nav li{
+    flex-shrink: 0;
+    margin-left: 5%;
+}
+
+.nav-btn, .header-left > a{
+    border-style: solid;
+    border-color: white;
+    padding: 0% 15% 0% 15% ;
+    border-radius: 10px;
+}
+header {
+
+}
+main {
+    background-size: 100%;
+    overflow: hidden;
+}
+footer {
+    height: 10vh;
+    float: bottom;
+    padding: 20px;
+    text-align: center;
+}

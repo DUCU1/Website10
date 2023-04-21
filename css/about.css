@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2%;
+}
+
+.member {
+    flex: 1 1 30%;
+    margin: 2%;
+    padding: 3%;
+    background-color: #94bbe9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.member img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5%;
+}
+
+.member h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.member p {
+    margin: 5% 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}

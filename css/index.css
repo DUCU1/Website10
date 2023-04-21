@@ -1,40 +1,19 @@
-/* Desktop */
-.section-1{
+/* Desktop*/
+ .section-1{
     height: 100vh;
-    background-image: url(../img/background.jpg);
+    /* background-image: url(../img/background.jpg);*/
     background-size: 100%;
-    padding-left: 8%;
-    padding-right: 8%;
     overflow: hidden;
 }
 
-.section-2{
-    height: 100vh;
+.section-2 {
+    height: 95vh;
+    float: left;
 }
 
-nav{
-    padding-top: 2%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-}
-
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10%;
-}
-
-nav li{
-    flex-shrink: 0;
-    margin-left: 5%;
-}
-
-.nav-btn, .header-left > a{
-    border-style: solid;
-    border-color: white;
-    padding: 0% 15% 0% 15% ;
-    border-radius: 10px;
+#video {
+    float: left;
+    margin-right: 20px;
 }
 
 .section-1 header{
@@ -42,7 +21,6 @@ nav li{
     flex-wrap: wrap-reverse;
     align-items: center;
     height: 100%;
-
 }
 
 .header-left > a{
@@ -54,7 +32,6 @@ nav li{
     max-width: 100%;
     width: 700px;
 }
-
 
 .section-1 header .header-left{
     flex: 1;
@@ -72,11 +49,11 @@ nav li{
     color: rgba(255, 255, 255, 0.764);
 }
 
-
-
 .section-1 header .header-right{
     padding-left: 12%;
     padding-bottom: 5%;
     flex: 2;
-
+}
+.section-2 p{
+    font-size: 1.2rem;
 }
