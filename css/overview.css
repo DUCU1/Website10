@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border-spacing: 0;
+}
+td, th {
+    text-align: center;
+    padding: 6px;
+    border: 1px solid black;
+}
+thead th {
+    border-bottom: 1px solid black;
+}
+tfoot th, tfoot td {
+    width: 100%;
+    border-top: 1px solid black;
+}
+tbody tr:nth-child(2n+1) {
+    background-color: #e9d17f;
+}
+table tr th:nth-child(1) {
+    width: 27%;
+}
+table tr th:nth-child(2) {
+    width: 10%;
+}
