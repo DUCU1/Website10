@@ -1,23 +1,35 @@
+section {
+    margin-bottom: 5em;
+}
 table {
     border-collapse: collapse;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(187,210,237,1) 100%);
+;
 }
 table, th, td {
     border-spacing: 0;
 }
+tr {
+    width: 100%;
+}
 td, th {
     text-align: center;
-    padding: 6px;
     border: 1px solid black;
+    width: 80%;
 }
 thead th {
     border-bottom: 1px solid black;
+    font-size: 2em;
 }
 tfoot th, tfoot td {
     width: 100%;
     border-top: 1px solid black;
 }
+tbody tr {
+    font-size: 1.5em;
+}
 tbody tr:nth-child(2n+1) {
-    background-color: #e9d17f;
+    background-color: #eeaeca;
 }
 table tr th:nth-child(1) {
     width: 27%;

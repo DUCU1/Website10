@@ -47,7 +47,7 @@ nav li{
     font-weight: bold;
 }
 header {
-
+    padding-top: 10px;
 }
 main {
     background-size: 100%;
@@ -56,6 +56,6 @@ main {
 footer {
     height: 10vh;
     float: bottom;
-    padding: 20px;
+    padding: 0.5em;
     text-align: center;
 }

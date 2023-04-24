@@ -1,0 +1,16 @@
+.pdf-carousel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.pdf-row {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.pdf-column {
+    width: 200%;
+    height: 100%;
+}
