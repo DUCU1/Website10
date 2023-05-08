@@ -10,18 +10,13 @@ nav {
 
 .section-2 {
     height: 100vh;
-    color: black;
-    background-color: red; //test fase
-    float: left;
 }
 .section-3 {
     height: 100vh;
-    background-color: black;
-    color: white;
 }
 
 #video {
-    float: left;
+    float: right;
     margin-right: 20px;
     width:50%;
     height:50%;
