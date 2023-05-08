@@ -1,0 +1,17 @@
+#queryFormLink,
+#queryForm {
+    display: none;
+}
+
+#queryFormLink,
+#loginButton {
+    margin-left: 10px;
+}
+
+#queryFormLink:hover {
+    text-decoration: underline;
+}
+
+#queryForm {
+    margin-top: 20px;
+}

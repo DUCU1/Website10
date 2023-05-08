@@ -6,10 +6,9 @@
     color: rgb(255, 255, 255);
   }
 body {
-    background: rgb(98,162,234);
-    background: linear-gradient(45deg, rgba(98,162,234,1) 0%, rgba(131,232,252,1) 86%);
-    padding-left: 8%;
-    padding-right: 8%;
+    background-image: url("../media/img/background.jpg");
+    /*background: rgb(98,162,234);
+    background: linear-gradient(45deg, rgba(98,162,234,1) 0%, rgba(131,232,252,1) 86%);*/
 }
 a{
     text-decoration: none;
@@ -21,6 +20,8 @@ ul{
 
 nav{
     padding-top: 2%;
+    padding-left: 8%;
+    padding-right: 8%;
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
@@ -46,6 +47,9 @@ nav li{
 .active {
     font-weight: bold;
 }
+nav li:hover{
+    text-decoration: underline;
+}
 header {
     padding-top: 10px;
 }
@@ -54,7 +58,6 @@ main {
     overflow: hidden;
 }
 footer {
-    height: 10vh;
     float: bottom;
     padding: 0.5em;
     text-align: center;

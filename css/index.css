@@ -1,12 +1,23 @@
 /* Desktop*/
+nav {
+    padding-left: 8%;
+    padding-right: 8%;
+}
  .section-1{
-    height: 100vh;
-    /* background-image: url(../img/background.jpg);*/
+     height: 100vh;
+     background-image: url("../media/img/background.jpg");
 }
 
 .section-2 {
-    height: 95vh;
+    height: 100vh;
+    color: black;
+    background-color: red; //test fase
     float: left;
+}
+.section-3 {
+    height: 100vh;
+    background-color: black;
+    color: white;
 }
 
 #video {
@@ -54,6 +65,7 @@
     padding-bottom: 5%;
     flex: 2;
 }
+
 .section-2 p{
     font-size: 1.2rem;
 }

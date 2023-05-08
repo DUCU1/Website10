@@ -1,10 +1,17 @@
+header {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+main {
+    padding-left: 8%;
+    padding-right: 8%;
+}
 section {
     margin-bottom: 5em;
 }
 table {
     border-collapse: collapse;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(187,210,237,1) 100%);
-;
 }
 table, th, td {
     border-spacing: 0;

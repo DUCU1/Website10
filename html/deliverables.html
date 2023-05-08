@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/deliverables.css">
   <!-- JavaScript -->
-
+  <script src="../javascript/deliverables.js"></script>
   <!-- Icons -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <!-- Title -->
@@ -27,20 +27,22 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a class="active" href="deliverables.html">Deliverables</a></li>
+      <li><a href="statistics.html">Statistics</a></li>
       <li><a class="nav-btn" href="download.html">Download</a></li>
     </ul>
   </nav>
   <main>
-    <header></header>
-    <div class="pdf-carousel">
-      <div class="pdf-row">
-        <div class="pdf-column">
-          <embed src="../media/pdf/team10%20(1).pdf" type="application/pdf" />
-        </div>
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <embed class="carousel__photo initial" src="../media/pdf/Infrastructure%20Integration%202.pdf" type="application/pdf" width="100%" height="500em">
+        <embed class="carousel__photo" src="../media/pdf/Documentation%20Statistics%20Screen.pdf" type="application/pdf" width="100%" height="500em">
+
+        <div class="carousel__button--next"></div>
+        <div class="carousel__button--prev"></div>
+
       </div>
     </div>
   </main>
   <footer>&copy; Copyright2023</footer>
-
 </body>
 </html>
