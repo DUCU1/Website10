@@ -1,14 +1,21 @@
 /* Desktop*/
-nav {
-    padding-left: 8%;
-    padding-right: 8%;
+body{
+    background-image: url(/media/img/Backgrounds/section-1-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
  .section-1{
      height: 100vh;
-     background-image: url("../media/img/background.jpg");
+     z-index: 1;
+     padding: 0% 8% 0% 8%; 
+     overflow: hidden;
+     z-index: 1;
 }
 
 .section-2 {
+    background-color: red;
+    z-index: 2;
     height: 100vh;
 }
 .section-3 {
@@ -31,12 +38,12 @@ nav {
 
 .header-left > a{
     font-size: 2rem;
-    padding: 0% 5% 0% 5% ;
+    padding: 0% 6% 0% 6% ;
 }
 
 .section-1 header img{
-    max-width: 100%;
-    width: 700px;
+    width: max-content;
+    max-width: 110%;
 }
 
 .section-1 header .header-left{
@@ -59,8 +66,13 @@ nav {
     padding-left: 12%;
     padding-bottom: 5%;
     flex: 2;
+    display: flex;
+    justify-content: end;
 }
 
 .section-2 p{
     font-size: 1.2rem;
 }
+
+
+/* Mobile */
