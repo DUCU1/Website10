@@ -29,6 +29,7 @@ nav ul{
     display: flex;
     justify-content: space-between;
     margin-right: 10%;
+    align-items: center;
 }
 
 nav li{
@@ -37,10 +38,10 @@ nav li{
 }
 
 
-.nav-btn, .header-left > a{
+.nav-btn{
     border-style: solid;
     border-color: white;
-    padding: 0% 15% 0% 15% ;
+    padding: 0% 10% 0% 10% ;
     border-radius: 10px;
 }
 
@@ -54,6 +55,12 @@ nav ul.active {
 
 nav.active{
     background-position: left bottom;
+}
+
+.team-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -76,10 +83,18 @@ nav.active{
       align-items: center;
       justify-content: space-around;
       transition: all .5s ease-out;
+    }
+
+    .team-logo{
+      display: flex;
+      justify-content: center;
       
     }
 
     nav ul li{
-        font-size: 3rem;
+        font-size: 2rem;
+        margin: 0%;
+
     }
+
   }
