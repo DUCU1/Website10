@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <!-- JavaScript -->
     <script src="./javascript/navbar.js" type="module"></script>
+    <script src="./javascript/index.js" type="module"></script>
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Title -->
@@ -22,6 +23,8 @@
 </head>
 <body>
     <main>
+
+        <!-- Section 1 -->
         <section class="section-1">
             <!-- Nav Bar -->
             <nav>
@@ -49,31 +52,41 @@
             </header>
         </section>
 
-
-
-        
+        <!-- Section 2 -->
         <section class="section-2" id="section-2">
-            <h1>Welcome To Take5</h1><br/>
-            <iframe id="video" src="https://www.youtube.com/embed/_BMP2Zgn_aY"></iframe> <!--Will be a screencast of the game-->
+            <article class="screencast"> 
+            <h1>Welcome To Take5</h1>
             <p>In this version of the game, the overall aim is to be the player with the most points at the end of each round.
-            <br/>To achieve this, players must strategically choose which cards to play each round,
+            To achieve this, players must strategically choose which cards to play each round,
             while also trying to avoid taking penalty points AKA bulls. The game involves a combination of luck and skill,
-            with players needing to think carefully about their moves in order to come out on top.</p>
+            with players needing to think carefully about their moves in order to come out on top. <br></br> To achieve this, players must strategically choose which cards to play each round, while also trying to avoid taking penalty points. The game involves a combination of luck and skill, with players needing to think carefully about their moves in order to come out on top.</p>
+            </article>
+
+            <video id="gameplay" autoplay>
+                <source src="./media/video/mov_bbb.mp4">
+                Your browser doesn't support HTML videos
+            </video>
         </section>
+
+
+
         <section class="section-3">
             <h2>Features</h2>
             <p>We are constantly working to bring new updates and features to Take 5, such as:</p>
+
             <article class="deliverable">
                 <img src="http://placehold.it/">
                 <h2>AI player</h2> <!--This will link to the actual application with AI functionality-->
                 <p>This advanced computer opponent will challenge even the most skilled human players,
                 offering a new level of excitement and competition to the game.</p>
             </article>
+
             <article class="deliverable">
                 <img src="http://placehold.it/">
                 <h2>Statistics</h2> <!-- Link to the html statistics page -->
                 <p>View detailed game statistics after each match with graphs and key metrics to help improve your gameplay in Take 5.</p>
             </article>
+
             <article class="deliverable">
                 <img src="http://placehold.it/">
                 <h2>Cloud Database</h2> <!--This will link to the infra task-->
