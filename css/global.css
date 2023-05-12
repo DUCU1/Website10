@@ -6,7 +6,7 @@
     color: rgb(255, 255, 255);
   }
 body {
-    background-color: #1B1B1B;
+    background-color: #1b1b1b;
 }
 
 header {
@@ -15,8 +15,56 @@ header {
 main {
     overflow: hidden;
 }
+
+
+/* Footer */
 footer {
-    float: bottom;
+    padding: 2% 4% 2% 4%;
+    width: 100vw;
+    background-color: #121212;
     padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact{
+    background-color: #1B1B1B;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact a{
     text-align: center;
+    padding-top: 4%;
+    margin-left: 5%;
+    padding-right: 5%;
+    color: #565656;
+    text-decoration: underline;
+}
+
+.social img{
+    width: 90%;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social a{
+    padding: 0% 5% 0% 5%;
+}
+
+@media only screen and (max-width: 440px) { 
+    footer{
+        flex-direction: column;
+    }
+
+    .contact{
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
 }

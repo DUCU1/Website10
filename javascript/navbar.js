@@ -8,8 +8,9 @@ function dropDown(){
 
     hamMenuIcon.addEventListener("click", () => {
     navBar.classList.toggle("active");
+    hamMenuIcon.classList.toggle("active");
     navT.classList.toggle("active");
-    exit.classList.toggle("active");
+    exit.classList.toggle("active")
     navBar.classList.toggle("active");
     });
 

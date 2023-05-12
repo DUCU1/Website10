@@ -3,10 +3,16 @@
     font-size: 3.2rem;
 }
 
+#exit-nav{
+  display: none;
+  font-size: 3.2rem;
+}
+
 
 a{
     text-decoration: none;
   }
+
 
 ul{
     list-style: none;
@@ -41,17 +47,22 @@ nav li{
 .nav-btn{
     border-style: solid;
     border-color: white;
-    padding: 0% 10% 0% 10% ;
+    padding: 0% 5% 0% 5% ;
     border-radius: 10px;
 }
 
-nav li:hover{
-    text-decoration: underline;
+a:hover{
+  color: #B999FF;;
+}
+
+.nav-btn:hover{
+  border-color: #B999FF;;
 }
 
 nav ul.active {
     left: 0;
 }
+
 
 nav.active{
     background-position: left bottom;
