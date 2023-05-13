@@ -7,16 +7,16 @@ function dropDown(){
     let navT = document.querySelector("nav")
 
     hamMenuIcon.addEventListener("click", () => {
-    navBar.classList.toggle("active");
-    hamMenuIcon.classList.toggle("active");
-    navT.classList.toggle("active");
-    exit.classList.toggle("active")
-    navBar.classList.toggle("active");
+        navBar.classList.toggle("active");
+        hamMenuIcon.classList.toggle("active");
+        navT.classList.toggle("active");
+        exit.classList.toggle("active")
+        navBar.classList.toggle("active");
     });
 
     navLinks.forEach((navLinks) => {
-    navLinks.addEventListener("click", () => {
-        navBar.classList.remove("active");
-    });
+        navLinks.addEventListener("click", () => {
+            navBar.classList.remove("active");
+        });
     });
 }

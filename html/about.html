@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/about.css">
 
     <!-- JavaScript -->
+    <script src="../javascript/navbar.js" type="module"></script>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -24,66 +25,82 @@
 <body>
         <!-- NavBar -->
         <nav>
-            <div class="team-logo"><a href="about.html">team 10</a></div>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a class="active" href="about.html">About Us</a></li>
-                <li><a href="deliverables.html">Deliverables</a></li>
-                <li><a href="statistics.html">Statistics</a></li>
-                <li><a class="nav-btn" href="download.html">Download</a></li>
+            <div class="team-logo"><a href="html/about.html">Team 10</a></div>
+            <i class="uil uil-ellipsis-h" id="drop-down"></i>
+            <i class="uil uil-times" id="exit-nav"></i>
+            <ul id="nav-bar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="html/about.html">About Us</a></li>
+                <li><a href="html/statistics.html">Statistics</a></li>
+                <li class="nav-btn" ><a href="html/download.html">Download</a></li>
             </ul>
-        </nav>
-        <header>
-            <h1>Our Team</h1>
-            <h2>Play Improve Win</h2>
-        </header>
+        </nav> 
+
         <main>
-            <section class="container">
-                <h1>Team of creators and developers</h1>
-                <article class="general">
-                    <h2>General info</h2>
-                    <p>During four sprints we worked together at our project. We learned how to communicate,
-                        help each other but also aks for help. We created the boardgame Take5 with JavaFX and
-                        added AI functionalities to it. A server was also made and configured. This is used to store
-                        the database and run the website on it. As last obviously we made a full functional site with
-                        HTML5, CSS3 and JavaScript. <br/><br/>
-                        Below you will learn more about us and what each of us did during the sprints.
-                    </p>
-                </article>
-            <!-- Members -->
-            <article class="member">
-                <img src="../media/img/ProfilePicture/Vlad.jpeg" alt="Team Member 1">
-                <h2>Vlad-Gabriel Buinceanu</h2>
-                <p>Front-End developer</p>
-                <p>1st rule of Frond-End
-                    <br/>- Make it beautiful!</p>
-            </article>
-            <article class="member">
-                <img src="../media/img/ProfilePicture/Jasper.jpg" alt="Team Member 2">
-                <h2>Jasper Marichal</h2>
-                <p>Server - Web developer</p>
-                <p>1st rule of management
-                    <br/>- Delegate, don't try and do everything yourself.</p>
-            </article>
-            <article class="member">
-                <img src="../media/img/ProfilePicture/Vasil.jpg" alt="Team Member 3">
-                <h2>Vasil Cherkezov</h2>
-                <p>Back-End developer</p>
-                <p>1st rule of Back-End
-                    <br/>- IF IT works don't touch it!</p>
-            </article>
-            <article class="member">
-                <img src="../media/img/ProfilePicture/Ghost.jpg" alt="Team Member 4">
-                <h2>Panagiotis</h2>
-                <p>Ghost member</p>
-                <p>1st rule of being a ghost
-                    <br/>- Be very quiet and hide...</p>
-            </article>
+
+            <!-- Header -->
+            <header>
+                <h1>Our Team</h1>
+                <p>Play · Improve · Win</p>
+            </header>
+
+            <section class="developers">
+                <h2>Team of creators and developers</h2>
+                <div class="cards-container">
+                    <!-- Jasper -->
+                    <div class="card">
+                        <img src="../media/img/ProfilePicture/Jasper.jpg" alt="Jasper">
+                        <h3>Jasper</h3>
+                        <h4>Backend - Management - Web Dev</h4>
+                        <p>1st rule of management - Delegate, don't try and do everything yourself.</p>
+                    </div>
+                    <!-- Vasil -->
+                    <div class="card">
+                        <img src="../media/img/ProfilePicture/Vasil.jpg" alt="Jasper">
+                        <h3>Vasil</h3>
+                        <h4>Java Developer</h4>
+                        <p>1 st rule of Development - IF IT works don't touch it!</p>
+                    </div>
+                    <!-- Vlad -->
+                    <div class="card">
+                        <img src="../media/img/ProfilePicture/Vlad.jpg" alt="Jasper">
+                        <h3>Vlad</h3>
+                        <h4>Java - Web - Statistics</h4>
+                        <p>1st rule of life - It is what it is</p>
+                    </div>
+                    <!-- Panos -->
+                    <div class="card">
+                        <img src="../media/img/ProfilePicture/Ghost.jpg" alt="Jasper">
+                        <h3>Panagiotis</h3>
+                        <h4>Ghost member</h4>
+                        <p>1st rule of being a ghost - Be very quiet and hide...</p>
+                    </div>
+                </div>
             </section>
-            <a href="overview.html">
-                <button onclick="">Overview project sprints</button>
-            </a>
+
+            <div class="workflow">
+                <img src="../media/img/Backgrounds/Rectangle 13.png" alt="">
+                <article>
+                    <h3>Workflow</h3>
+                    <h2>The Essential Ingredient: Trust in Project Success</h2>
+                    <p>"Trust is the glue of life. It's the most essential ingredient in effective communication. It's the foundational principle that holds all relationships." - Stephen Covey</p>
+                    <a href="./deliverables.html">See our work</a>
+                </article>
+            </div>
         </main>
-        <footer>&copy; Copyright2023</footer>
+
+        <footer>
+            <div class="contact">
+                <a href="mailto: ourmail@team10.com">team10@mail.com</a>
+                <a href="mailto: ourmail@team10.com"><img src="../media/img/Graphics/submit-btn.svg" alt="sub-btn"></a>
+            </div>
+    
+            <div class="social">
+                <a href=""><img src="../media/img/Graphics/gitlab 1.svg" alt="git"></a>
+                <a href=""><img src="../media/img/Graphics/twitter 1.svg" alt=""></a>
+                <a href=""><img src="../media/img/Graphics/facebook-messenger 1.svg" alt=""></a>
+            </div>
+        </footer>
+        
 </body>
 </html>

@@ -1,74 +1,146 @@
-.container {
+body{
+    font-size: 16px;
+    background-image: url(../media/img/Backgrounds/about-bg.png);
+    background-size: cover;
+}
+
+main{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/* Desktop */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+}
+
+h1{
+    font-family: 'Sora', sans-serif;
+    font-size: 6vw;
+    color: white;
+}
+
+header p{
+    padding-top: 1%;
+    color: #b999ffcf;
+    font-size: x-large;
+
+}
+
+.developers{
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 0% 0% 0% ;
+    align-items: center;
+}
+
+h2{
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5vw;
+    color: white;
+    align-self: center;
+}
+
+.cards-container{
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    margin: 2%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
 }
-.general {
-    margin: 2%;
+
+/* Card */
+
+.card{
+    min-width: 200px;
+    width: 400px;
+    border-radius: 40px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(0, 0, 0, 0.25) 100%);
+    margin-bottom: 5% ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0%;
+    max-width: 500px;
+
+}
+
+.card img{
+    padding: 0%;
+    margin: 0%;
+    max-width: max-content;
+}
+
+
+h3{
+    font-size: 1.5vw;
     padding: 3%;
-    background-color: #94bbe9;
-    border: 0.3em solid #94bbe9;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+}
+
+
+h4{
+    padding-bottom: 5%;
+    font-size: larger;
+    color: #b999ff;
+}
+
+.card p{
+    color: rgba(255, 255, 255, 0.827);
+    padding-bottom: 6%;
+    padding-inline: 5%;
     text-align: center;
+    word-wrap: break-word;
 }
-.general:hover {
-    border: 0.3em solid rgb(255, 255, 255);
+
+/* End of Card */
+
+.workflow{
+    padding-left: 8%;
+    padding-right: 8%;
+    display: flex;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
-.general:hover h2{
-    font-size: 2em;
-}
-.member {
-    flex: 1 1 30%;
-    margin: 2%;
+
+.workflow article{
+    display: flex;
+    flex-direction: column;
     padding: 3%;
-    background-color: #94bbe9;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+}
+
+.workflow article h3{
+    padding: 0;
+    margin-bottom: 4%;
+    color: #b999ff;
+}
+
+.workflow img{
+    width: 30vw;
+}
+
+.workflow article a{
+    font-size: x-large;
+    border-radius: 10px;
+    border-color: #b999ff;
+    margin-top: 5%;
+    color: #b999ff;
     text-align: center;
+    border-style: solid;
 }
 
-.member img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 5%;
-}
-
-.member h2 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.member p {
-    margin: 5% 0;
-    font-size: 1.5rem;
-    line-height: 1.5;
-}
-.member:hover,
-.member:hover h2,
-.member:hover p {
-    background-color: rgb(255, 255, 255);
-    color: #94bbe9;
-}
-.member:hover img {
-    width: 60%;
-    border: 0.5em solid #94bbe9;
-}
-button {
-    background-color: #94bbe9;
-    border: none;
-    font-size: 1.5em;
-    font-weight: bold;
-    width: 100%;
-    height: 2.5em;
-    border-radius: 2em;
-}
-button:hover {
-    color: #94bbe9;
-    background-color: rgb(255, 255, 255);
+.workflow article a:hover{
+    color: #702eff;
+    border-color:#702eff ;
 }
