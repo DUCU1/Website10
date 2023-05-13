@@ -104,6 +104,7 @@ h4{
 
 /* End of Card */
 
+/* Bottom section */
 .workflow{
     padding-left: 8%;
     padding-right: 8%;
@@ -143,4 +144,39 @@ h4{
 .workflow article a:hover{
     color: #702eff;
     border-color:#702eff ;
+}
+
+/* Mobile */
+/* Tablet */
+@media only screen and (max-width: 1000px) {
+    body{
+        background-position-x: -1000px;
+    }
+    header{
+        margin-top: 20%;
+    }
+    h1{
+        font-size: 7vw;
+    }
+
+    h2{
+        font-size: 2em;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .cards-container{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 110%;
+        padding-left: 4%;
+        padding-right: 4%;
+        margin-bottom: 12%;
+    }
+
+    .workflow{
+        flex-direction: column;
+    }
 }
