@@ -54,9 +54,48 @@ button i{
     font-size: xx-large;
 }
 
+#prev-btn-mobile, #next-btn-mobile{
+    display: none;
+}
+
 
 @media only screen and (max-width: 1000px) {
     nav ul {
         background-color: rgb(255, 255, 255);
     }
+
+    .carousel-container{
+        flex-direction: column;
+    }
+
+    .container-btn-mobile{
+        margin-top: 5%;
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    #prev-btn{
+        display: none;
+    }
+    #next-btn{
+        display: none;
+    }
+
+    embed{
+        height: 70vh;
+    }
+
+    #next-btn-mobile{
+        display: block;
+    }
+
+    #prev-btn-mobile{
+        display: block;
+    }
+
+
+
+
+
+
 }
