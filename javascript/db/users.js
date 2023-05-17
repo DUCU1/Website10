@@ -1,20 +1,27 @@
-export const usersJSON = [
+const usersJSON = [
+    {
+        username: "j",
+        password: "j",
+        role: "admin"
+    },
     {
         username: "Jasper",
-        email: "jasper.marichal@student.kdg.be",
         password: "initial01",
         role: "admin"
     },
     {
         username: "Vlad",
-        email: "Vlad@student.kdg.be",
         password: "initial01",
         role: "admin"
     },
     {
-        username: "Player123",
-        email: "player@student.kdg.be",
+        username: "Vasil",
         password: "initial01",
-        role: "player"
-    }
-]
+        role: "admin"
+    },
+    {
+        username: "Panos",
+        password: "ghost",
+        role: "ghost"
+    },
+];

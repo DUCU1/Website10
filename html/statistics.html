@@ -12,29 +12,75 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/statistics.css">
     <!-- JavaScript -->
-
+    <script src="../javascript/db/users.js"></script>
+    <script src="../javascript/loginForm.js" type="module"></script>
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Title -->
     <title>Statistics</title>
 </head>
 <body>
-    <!-- NavBar -->
-    <nav>
-        <div class="team-logo"><a href="about.html">team 10</a></div>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="deliverables.html">Deliverables</a></li>
-            <li><a class="active" href="statistics.html">Statistics</a></li>
-            <li><a class="nav-btn" href="download.html">Download</a></li>
-        </ul>
-    </nav>
+<!-- Nav Bar -->
+<nav>
+    <div class="team-logo"><a href="about.html">Team 10</a></div>
+    <i class="uil uil-ellipsis-h" id="drop-down"></i>
+    <i class="uil uil-times" id="exit-nav"></i>
+    <ul id="nav-bar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a class="active" href="statistics.html">Statistics</a></li>
+        <li class="nav-btn" ><a href="download.html">Download</a></li>
+    </ul>
+</nav>
 <header>
     <h2>Statistics</h2>
     <main>
-        <p>Here will come the whole graph</p>
+        <article class="login-form">
+            <h1>Login Page</h1>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Log in</button>
+            </form>
+        </article>
+        <article class="gameQuery" style="display: none;">
+            <h1>Welcome!</h1>
+            <button id="logoutButton">Log out</button>
+            <form class="queryForm">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id">
+
+                <label for="playerName">Player Name:</label>
+                <input type="text" id="playerName" name="playerName" disabled>
+
+                <label for="score">Score:</label>
+                <input type="number" id="score" name="score">
+
+                <label for="comparison">Score Comparison:</label>
+                <select id="comparison" name="comparison">
+                    <option value="above">Above</option>
+                    <option value="equal">Equal</option>
+                    <option value="below">Below</option>
+                </select>
+
+                <label for="win">Win:</label>
+                <input type="checkbox" id="win" name="win">
+
+                <label for="before">Before:</label>
+                <input type="date" id="before" name="before">
+
+                <label for="after">After:</label>
+                <input type="date" id="after" name="after">
+
+                <button type="submit">Submit</button>
+            </form>
+        </article>
     </main>
 </header>
 </body>

@@ -1,40 +1,49 @@
-// Check if the user is already logged in
-if (window.localStorage.getItem('loggedIn') === 'true') {
-    // Display logout button instead of login button
-    document.getElementById('loginButton').innerHTML = 'Logout';
+const loginForm = document.getElementById('loginForm');
+const gameQuery = document.querySelector('.gameQuery');
 
-    // Enable the query form link
-    document.getElementById('queryFormLink').style.display = 'block';
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    // Open the query form
-    document.getElementById('queryForm').style.display = 'block';
+    const user = usersJSON.find(user => user.username === username && user.password === password);
+    if (user) {
+        enableGameQuery(user);
+        loginForm.style.display = 'none';
+    } else {
+        alert('Invalid username or password. Please try again.');
+        emptyFields();
+    }
 }
 
-// Add a click event listener to the login/logout button
-document.getElementById('loginButton').addEventListener('click', function() {
-    if (window.localStorage.getItem('loggedIn') === 'true') {
-        // User is logged in, so log them out
-        window.localStorage.setItem('loggedIn', 'false');
+function enableGameQuery(user) {
+    const queryForm = document.getElementById('queryForm');
+    const playerNameField = document.getElementById('playerName');
 
-        // Hide the query form
-        document.getElementById('queryForm').style.display = 'none';
+    gameQuery.style.display = 'block';
 
-        // Disable the query form link
-        document.getElementById('queryFormLink').style.display = 'none';
-
-        // Change the login/logout button text to "Login"
-        this.innerHTML = 'Login';
+    playerNameField.value = user.username;
+    if (user.role === 'admin') {
+        playerNameField.disabled = false;
     } else {
-        // User is not logged in, so log them in
-        window.localStorage.setItem('loggedIn', 'true');
-
-        // Enable the query form link
-        document.getElementById('queryFormLink').style.display = 'block';
-
-        // Open the query form
-        document.getElementById('queryForm').style.display = 'block';
-
-        // Change the login/logout button text to "Logout"
-        this.innerHTML = 'Logout';
+        playerNameField.disabled = true;
     }
+}
+
+function logout() {
+    loginForm.style.display = 'block';
+    gameQuery.style.display = 'none';
+    emptyFields();
+}
+
+function emptyFields(){
+    document.getElementById('username').value = '';
+    document.getElementById('password').value = '';
+}
+
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    login();
 });
+
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', logout);
