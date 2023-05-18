@@ -1,5 +1,8 @@
-const loginForm = document.getElementById('loginForm');
-const gameQuery = document.querySelector('.gameQuery');
+const loginForm = document.getElementById('login-form');
+const gameQuery = document.querySelector('.sidebar');
+const loginButton = document.getElementById('loginButton');
+const logoutButton = document.getElementById('logoutButton');
+const table = document.getElementById('table');
 
 function login() {
     const username = document.getElementById('username').value;
@@ -22,16 +25,13 @@ function enableGameQuery(user) {
     gameQuery.style.display = 'block';
 
     playerNameField.value = user.username;
-    if (user.role === 'admin') {
-        playerNameField.disabled = false;
-    } else {
-        playerNameField.disabled = true;
-    }
+    playerNameField.disabled = user.role !== 'admin';
 }
 
 function logout() {
     loginForm.style.display = 'block';
     gameQuery.style.display = 'none';
+    table.style.display = 'none';
     emptyFields();
 }
 
@@ -40,10 +40,9 @@ function emptyFields(){
     document.getElementById('password').value = '';
 }
 
-loginForm.addEventListener('submit', function(event) {
+
+loginButton.addEventListener('click', function(event) {
     event.preventDefault();
     login();
 });
-
-const logoutButton = document.getElementById('logoutButton');
 logoutButton.addEventListener('click', logout);

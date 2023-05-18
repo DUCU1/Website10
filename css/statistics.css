@@ -1,4 +1,30 @@
-form {
+main {
+    display: flex;
+}
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid blue;
+}
+.gameQuery {
+    margin-top: 20px;
+}
+.gameForm {
+    margin-top: 20px;
+    background-color: black;
+    border: 1px solid #ddd;
+}
+.table {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#loginForm {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,9 +41,12 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+#comparison option {
+    color: black;
+}
 
-.login-form input[type="text"],
-.login-form input[type="password"] {
+#login-form input[type="text"],
+#login-form input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;

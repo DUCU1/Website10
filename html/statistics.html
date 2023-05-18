@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,28 +16,28 @@
     <!-- JavaScript -->
     <script src="../javascript/db/users.js"></script>
     <script src="../javascript/loginForm.js" type="module"></script>
+    <script src="../javascript/query.js" type="module"></script>
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Title -->
     <title>Statistics</title>
 </head>
 <body>
-<!-- Nav Bar -->
-<nav>
-    <div class="team-logo"><a href="about.html">Team 10</a></div>
-    <i class="uil uil-ellipsis-h" id="drop-down"></i>
-    <i class="uil uil-times" id="exit-nav"></i>
-    <ul id="nav-bar">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a class="active" href="statistics.html">Statistics</a></li>
-        <li class="nav-btn" ><a href="download.html">Download</a></li>
-    </ul>
-</nav>
-<header>
+    <!-- Nav Bar -->
+    <nav>
+        <div class="team-logo"><a href="about.html">Team 10</a></div>
+        <i class="uil uil-ellipsis-h" id="drop-down"></i>
+        <i class="uil uil-times" id="exit-nav"></i>
+        <ul id="nav-bar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a class="active" href="statistics.html">Statistics</a></li>
+            <li class="nav-btn" ><a href="download.html">Download</a></li>
+        </ul>
+    </nav>
     <h2>Statistics</h2>
     <main>
-        <article class="login-form">
+        <article id="login-form">
             <h1>Login Page</h1>
             <form id="loginForm">
                 <label for="username">Username:</label>
@@ -46,42 +46,47 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit">Log in</button>
+                <button id="loginButton">Log in</button>
             </form>
         </article>
-        <article class="gameQuery" style="display: none;">
-            <h1>Welcome!</h1>
-            <button id="logoutButton">Log out</button>
-            <form class="queryForm">
-                <label for="id">ID:</label>
-                <input type="number" id="id" name="id">
+        <aside class="sidebar" style="display: none;">
+            <article class="gameQuery">
+                <h1>Welcome!</h1>
+                <button id="logoutButton">Log out</button>
+                <form class="queryForm">
+                    <br><br>
+                    <label for="id">ID:</label>
+                    <input type="number" id="id" name="id" min="0">
 
-                <label for="playerName">Player Name:</label>
-                <input type="text" id="playerName" name="playerName" disabled>
+                    <label for="playerName">Player Name:</label>
+                    <input type="text" id="playerName" name="playerName" disabled>
 
-                <label for="score">Score:</label>
-                <input type="number" id="score" name="score">
+                    <label for="score">Score:</label>
+                    <input type="number" id="score" name="score" min="0">
 
-                <label for="comparison">Score Comparison:</label>
-                <select id="comparison" name="comparison">
-                    <option value="above">Above</option>
-                    <option value="equal">Equal</option>
-                    <option value="below">Below</option>
-                </select>
+                    <label for="comparison">Score Comparison:</label>
+                    <select id="comparison" name="comparison">
+                        <option value="above">Above</option>
+                        <option value="equal">Equal</option>
+                        <option value="below">Below</option>
+                    </select>
 
-                <label for="win">Win:</label>
-                <input type="checkbox" id="win" name="win">
+                    <label for="win">Win:</label>
+                    <input type="checkbox" id="win" name="win">
 
-                <label for="before">Before:</label>
-                <input type="date" id="before" name="before">
+                    <label for="before">Before:</label>
+                    <input type="date" id="before" name="before">
 
-                <label for="after">After:</label>
-                <input type="date" id="after" name="after">
+                    <label for="after">After:</label>
+                    <input type="date" id="after" name="after">
 
-                <button type="submit">Submit</button>
-            </form>
+                    <button id="searchButton">Search</button>
+                </form>
+            </article>
+        </aside>
+        <article id="table" style="display: none;">
+            <img id="picture" src="../media/img/ProfilePicture/Jasper.jpg" alt="Picture">
         </article>
     </main>
-</header>
 </body>
 </html>
