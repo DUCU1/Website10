@@ -195,7 +195,7 @@ button:hover {
 
 }
 
-@media only screen and (max-width: 440px) { 
+@media only screen and (max-width: 500px) { 
     h1{
         font-size: 3rem;
         margin-top: 20%;
@@ -207,5 +207,13 @@ button:hover {
 
     #login-form{
         border-radius: 30px;
+    }
+
+    .sidebar{
+        width: 85%;
+    }
+
+    main{
+        flex-direction: column;
     }
 }
