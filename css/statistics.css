@@ -100,15 +100,21 @@ h1{
     border-radius: 30px;
 }
 
-#loginForm input{
-
+#loginForm input, aside input, #comparison{
+    border-radius: 30px;
     background-color: #1B1B1B;
+    
 }
-
+#playerName, #id, #score, #comparison, #win, #before, #after{
+    color: white;
+}
 input::placeholder{
-    background-color:#1B1B1B ;
     font-size:1.5vw ;
     color: white;
+}
+
+input::after{
+    border-color: #B999FF;
 }
 
 button {
