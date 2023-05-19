@@ -57,25 +57,36 @@ h1{
     background-color: black;
     border: 1px solid #ddd;
 }
-.table {
+#tableContainer {
+    width: 70vw;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+#table {
+    width: 100%;
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.table img {
-    max-width: 100%;
-    max-height: 100%;
+#table th,
+#table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#table th {
+    background-color: #1B1B1B;
+}
+#table tbody tr:nth-child(even) {
+    background-color: #1B1B1B;
 }
 #login-form{
     margin-bottom: 20%;
     height: 50vh;
     width: 35%;
     background-color: #1B1B1B;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding: 4%;
     border-radius: 50px;
 }
 

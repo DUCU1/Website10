@@ -1,13 +1,14 @@
 //Get form
-const gameQuery = document.querySelector('.queryForm');
 const searchButton = document.getElementById('searchButton');
 const tableContainer = document.getElementById('tableContainer');
 
 
 searchButton.addEventListener('click', function(event) {
     event.preventDefault();
+
     const arr = filter();
     displayTable(arr);
+
     tableContainer.style.display = 'block';
 });
 
@@ -27,7 +28,7 @@ function filter() {
         filteredGames = filteredGames.filter(game => game.id === parseInt(id));
     } else {
         if (playerName !== '') {
-            filteredGames = filteredGames.filter(game => game.player === playerName);
+            filteredGames = filteredGames.filter(game => game.playerName === playerName);
         }
         if (win) {
             filteredGames = filteredGames.filter(game => game.win);
@@ -52,16 +53,13 @@ function filter() {
 }
 
 function displayTable(arr) {
-    const table = document.createElement('table');
-    const headerRow = document.createElement('tr');
+    const table = document.getElementById('table');
+    const tbody = table.querySelector('tbody');
 
-    Object.keys(arr[0]).forEach(key => {
-        const th = document.createElement('th');
-        th.textContent = key;
-        headerRow.appendChild(th);
-    });
-
-    table.appendChild(headerRow);
+    // Clear existing table rows
+    while (tbody.firstChild) {
+        tbody.firstChild.remove();
+    }
 
     arr.forEach(game => {
         const row = document.createElement('tr');
@@ -72,11 +70,6 @@ function displayTable(arr) {
             row.appendChild(td);
         });
 
-        table.appendChild(row);
+        tbody.appendChild(row);
     });
-
-    while (tableContainer.firstChild) {
-        tableContainer.firstChild.remove();
-    }
-    tableContainer.appendChild(table);
 }
