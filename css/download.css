@@ -48,3 +48,13 @@ p{
     font-family: 'Sora', sans-serif;
     font-size: 3vh;
 }
+
+footer{
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 1000px) {
+    body{
+        background-position-x: 80%;
+    }
+}

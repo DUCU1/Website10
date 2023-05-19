@@ -12,6 +12,7 @@ body{
     z-index: 1;
 }
 
+
 .header-left > a{
     border-style: solid;
     border-color: white;
@@ -342,6 +343,23 @@ video {
         width: 80%;
     }
 
+}
 
-    
+
+/* Animations */
+
+/* Little arrow animation */
+
+.hover-effect {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-effect:hover .uil-arrow-down {
+    transform: translateY(5px);
+}
+
+.uil-arrow-down {
+    transition: transform 0.3s ease;
+    display: inline-block; /* Add this line to ensure the arrow icon is displayed properly */
 }

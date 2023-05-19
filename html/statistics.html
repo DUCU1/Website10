@@ -18,6 +18,7 @@
     <script src="../javascript/loginForm.js" type="module"></script>
     <script src="../javascript/query.js" type="module"></script>
     <script src="../javascript/db/testDB.js"></script>
+    <script src="../javascript/navbar.js" type="module"></script>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -37,24 +38,23 @@
             <li class="nav-btn" ><a href="download.html">Download</a></li>
         </ul>
     </nav>
-    <h2>Statistics</h2>
+
+
     <main>
+        <h1>Statistics</h1>
+        
         <article id="login-form">
-            <h1>Login Page</h1>
             <form id="loginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <input type="password" id="password" name="password" required placeholder="Password">
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button id="loginButton">Log in</button>
+                <button id="loginButton">Log In</button>
             </form>
         </article>
+
         <aside class="sidebar" style="display: none;">
             <article class="gameQuery">
                 <h1>Welcome!</h1>
-                <button id="logoutButton">Log out</button>
                 <form class="queryForm">
                     <br><br>
                     <label for="id">ID:</label>
@@ -84,11 +84,27 @@
 
                     <button id="searchButton">Search</button>
                 </form>
+                <button id="logoutButton">Log out</button>
             </article>
         </aside>
         <article id="tableContainer" style="display: none;">
             <img id="picture" src="../media/img/ProfilePicture/Jasper.jpg" alt="Picture">
         </article>
     </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="contact">
+        <a href="mailto: ourmail@team10.com">team10@mail.com</a>
+        <a href="mailto: ourmail@team10.com"><img src="../media/img/Graphics/submit-btn.svg" alt="sub-btn"></a>
+    </div>
+
+    <div class="social">
+        <a href=""><img src="../media/img/Graphics/gitlab 1.svg" alt="git"></a>
+        <a href=""><img src="../media/img/Graphics/twitter 1.svg" alt=""></a>
+        <a href=""><img src="../media/img/Graphics/facebook-messenger 1.svg" alt=""></a>
+    </div>
+</footer>
+</body>
 </body>
 </html>

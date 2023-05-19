@@ -1,12 +1,55 @@
-main {
-    display: flex;
+body{
+    background-color: white;
+    background-image: url(../media/img/Backgrounds/statistics-bg.png);
+    background-size: cover;
 }
+main {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Nav  */
+nav a{
+    color: black;
+}
+
+.nav-btn{
+    border-color: black;
+}
+
+#drop-down{
+    color: black;
+}
+
+
+/* End of nav */
+
+h1{
+    font-weight: lighter;
+    margin-bottom: 5%;
+    color: #1B1B1B;
+    font-family: 'Sora', sans-serif;
+    font-size: 8vh;
+}
+
 .sidebar {
-    width: 30%;
+    background-color: #1B1B1B;
+    border-radius: 50px;
+    width: 50vw;
     padding: 20px;
-    border: 1px solid blue;
+    margin-bottom: 30%;
+}
+
+.sidebar h1{
+    color: white;
 }
 .gameQuery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 .gameForm {
@@ -24,23 +67,25 @@ main {
     max-width: 100%;
     max-height: 100%;
 }
-#loginForm {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: black;
-    border: 1px solid #ddd;
+#login-form{
+    margin-bottom: 20%;
+    height: 50vh;
+    width: 35%;
+    background-color: #1B1B1B;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 50px;
 }
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+#loginForm{
+    margin-top: 10%;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
 }
-label {
-    display: block;
-    margin-bottom: 5px;
-}
+
 #comparison option {
     color: black;
 }
@@ -49,22 +94,39 @@ label {
 #login-form input[type="password"] {
     width: 100%;
     padding: 10px;
+    height: 15%;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    color: black;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+#loginForm input{
+
+    background-color: #1B1B1B;
+}
+
+input::placeholder{
+    background-color:#1B1B1B ;
+    font-size:1.5vw ;
+    color: white;
 }
 
 button {
+    margin-top: 10%;
+    font-size: 1.5vw;
     width: 100%;
     padding: 10px;
-    background-color: red;
+    background-color:#B999FF;
     color: #ffffff;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
 }
 button:hover {
-    background-color: darkred;
+    color: #1B1B1B;
+    background-color: rgb(255, 255, 255);
 }
+
 
 .queryForm input[type="text"],
 .queryForm input[type="number"],
@@ -72,7 +134,7 @@ button:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     color: black;
 }
 
@@ -80,11 +142,64 @@ button:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     color: black;
     background-color: white;
 }
 #logoutButton {
     width: 50%;
-    float: left;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    nav ul{
+        background-color: white;
+    }
+    nav{
+        background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+    }
+    #login-form{
+        width: 60%;
+        margin-bottom: 60%;
+    }
+
+    #login-form button{
+        font-size: 1rem;
+    }
+
+    .sidebar{
+        width: 70%;
+    }
+
+    .sidebar h1{
+        font-size: 2rem;
+        color: white;
+    }
+
+    .sidebar button{
+        font-size: 1rem;
+    }   
+
+}
+
+@media only screen and (max-width: 440px) { 
+    h1{
+        font-size: 3rem;
+        margin-top: 20%;
+    }
+
+    .sidebar{
+        border-radius: 30px;
+    }
+
+    #login-form{
+        border-radius: 30px;
+    }
 }
