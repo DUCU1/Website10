@@ -52,11 +52,13 @@ function filter() {
     return filteredGames;
 }
 
+let sortColumn = null;
+let sortAscending = true;
+
 function displayTable(arr) {
     const table = document.getElementById('table');
     const tbody = table.querySelector('tbody');
 
-    // Clear existing table rows
     while (tbody.firstChild) {
         tbody.firstChild.remove();
     }
@@ -64,7 +66,7 @@ function displayTable(arr) {
     arr.forEach(game => {
         const row = document.createElement('tr');
 
-        Object.values(game).forEach(value => {
+        Object.values(game).forEach((value, index) => {
             const td = document.createElement('td');
             td.textContent = value;
             row.appendChild(td);
@@ -72,4 +74,48 @@ function displayTable(arr) {
 
         tbody.appendChild(row);
     });
+
+    const headers = document.querySelectorAll('th');
+
+    headers.forEach((header, index) => {
+        if (index === 1 || index === 2) { // Add sort buttons only for Player Name and Score columns
+            const button = header.querySelector('button');
+            button.addEventListener('click', () => {
+                sortTable(index);
+                updateSortButtons();
+            });
+
+            header.appendChild(button);
+        }
+    });
+
+    function sortTable(column) {
+        if (sortColumn === column) {
+            sortAscending = !sortAscending;
+        } else {
+            sortColumn = column;
+            sortAscending = true;
+        }
+
+        arr.sort((a, b) => {
+            const valueA = Object.values(a)[column];
+            const valueB = Object.values(b)[column];
+
+            if (typeof valueA === 'string' && typeof valueB === 'string') {
+                return sortAscending ? valueA.localeCompare(valueB) : valueB.localeCompare(valueA);
+            } else {
+                return sortAscending ? valueA - valueB : valueB - valueA;
+            }
+        });
+
+        displayTable(arr);
+    }
+
+    function updateSortButtons() {
+        headers.forEach((header, index) => {
+            const button = header.querySelector('button');
+            button.textContent = index === sortColumn ? (sortAscending ? 'v' : '^') : '-';
+        });
+    }
+
 }
