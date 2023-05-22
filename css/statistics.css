@@ -7,9 +7,9 @@ main {
     margin-top: 8%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     padding-left: 8%;
     padding-right: 8%;
+    justify-content: space-around;
 }
 
 
@@ -60,25 +60,26 @@ h1{
     border: 1px solid #ddd;
 }
 #tableContainer {
-    width: 70vw;
-    border: 1px solid #ddd;
+    background-color: #1B1B1B;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 #table {
-    width: 100%;
+    width: 40vw;
     flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 #table th,
 #table td {
     padding: 10px;
-    border: 1px solid #ddd;
 }
 #table th {
     background-color: #1B1B1B;
+}
+#table tbody tr{
+    background-color: #B999FF;
 }
 #table tbody tr:nth-child(even) {
     background-color: #1B1B1B;
@@ -172,6 +173,15 @@ button:hover {
 
 
 @media only screen and (max-width: 1000px) {
+
+    #table{
+        width: 100%;
+    }
+
+    main{
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
 
     nav ul{
         background-color: white;
