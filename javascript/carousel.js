@@ -10,7 +10,8 @@ document.getElementById("next-btn").addEventListener("click", () => {
 });
 
 function showPdf(index) {
-  const pdfs = ["../media/pdf/pdf1.pdf#toolbar=0", "../media/pdf/pdf2.pdf#toolbar=0"]; 
+  const pdfs = ["../media/pdf/Documentation.pdf#toolbar=0"
+    , "../media/pdf/Infrastructure Integration 2.pdf#toolbar=0"];
   if (index > pdfs.length) {
     pdfIndex = 1;
   }
