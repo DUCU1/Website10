@@ -6,13 +6,14 @@ const tableContainer = document.getElementById('tableContainer');
 searchButton.addEventListener('click', function(event) {
     event.preventDefault();
 
-    const arr = filter();
-    displayTable(arr);
+    const arr = filter();//Get thee information out of the db.js
+    displayTable(arr); //Fill the display with the array generated with the filter function
 
-    tableContainer.style.display = 'block';
+    tableContainer.style.display = 'block'; //After updating the information display the container
 });
 
 function filter() {
+    //Get values from all the input fields
     const id = document.getElementById('id').value;
     const playerName = document.getElementById('playerName').value;
     const score = document.getElementById('score').value;
@@ -21,12 +22,14 @@ function filter() {
     const beforeDate = document.getElementById('before').value;
     const afterDate = document.getElementById('after').value;
 
+    //Init the gameJson file
     const game = gamesJson;
     let filteredGames = gamesJson;
 
-    if (id !== '') {
+    //If else statements to select the right information
+    if (id !== '') { //If id is filled in select all information with that id
         filteredGames = filteredGames.filter(game => game.id === parseInt(id));
-    } else {
+    } else { //ID not filled in go over the other options
         if (playerName !== '') {
             filteredGames = filteredGames.filter(game => game.playerName === playerName);
         }
@@ -49,20 +52,23 @@ function filter() {
             filteredGames = filteredGames.filter(game => new Date(game.date) > new Date(afterDate));
         }
     }
-    return filteredGames;
+    return filteredGames;//Returns the filteredGames
 }
 
 let sortColumn = null;
 let sortAscending = true;
 
 function displayTable(arr) {
+    //Get the table
     const table = document.getElementById('table');
     const tbody = table.querySelector('tbody');
 
+    //Remove all information from the tbody
     while (tbody.firstChild) {
         tbody.firstChild.remove();
     }
 
+    //fill the tbody back with the filtered game data
     arr.forEach(game => {
         const row = document.createElement('tr');
 
@@ -76,7 +82,7 @@ function displayTable(arr) {
     });
 
     const headers = document.querySelectorAll('th');
-
+    //Sort buttons are added
     headers.forEach((header, index) => {
         if (index === 1 || index === 2) { // Add sort buttons only for Player Name and Score columns
             const button = header.querySelector('button');
@@ -90,6 +96,7 @@ function displayTable(arr) {
     });
 
     function sortTable(column) {
+        //Table will be sorted
         if (sortColumn === column) {
             sortAscending = !sortAscending;
         } else {
@@ -112,6 +119,7 @@ function displayTable(arr) {
     }
 
     function updateSortButtons() {
+        //Update buttons when something is getting updated
         headers.forEach((header, index) => {
             const button = header.querySelector('button');
             button.textContent = index === sortColumn ? (sortAscending ? 'v' : '^') : '-';

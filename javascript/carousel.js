@@ -1,6 +1,6 @@
 let pdfIndex = 1;
 showPdf(pdfIndex);
-
+//Changes the value of pdfIndex, depending on what the pdfIndex is another pdf is selected
 document.getElementById("prev-btn").addEventListener("click", () => {
   showPdf(pdfIndex -= 1);
 });
